@@ -46,12 +46,12 @@ private
       # Thumbs        
       @thumbs                   = HashWithIndifferentAccess.new
       @thumbs[:small]           = HashWithIndifferentAccess.new
-      @thumbs[:small][:default] = datas["entry"]["media$group"]["media$thumbnail"][0]
-      @thumbs[:small][:start]   = datas["entry"]["media$group"]["media$thumbnail"][3]
-      @thumbs[:small][:middle]  = datas["entry"]["media$group"]["media$thumbnail"][4]
-      @thumbs[:small][:end]     = datas["entry"]["media$group"]["media$thumbnail"][5]
-      @thumbs[:medium]          = datas["entry"]["media$group"]["media$thumbnail"][1]
-      @thumbs[:large]           = datas["entry"]["media$group"]["media$thumbnail"][2]
+      @thumbs[:small][:default] = datas["entry"]["media$group"]["media$thumbnail"][0]["url"]
+      @thumbs[:small][:start]   = datas["entry"]["media$group"]["media$thumbnail"][3]["url"]
+      @thumbs[:small][:middle]  = datas["entry"]["media$group"]["media$thumbnail"][4]["url"]
+      @thumbs[:small][:end]     = datas["entry"]["media$group"]["media$thumbnail"][5]["url"]
+      @thumbs[:medium]          = datas["entry"]["media$group"]["media$thumbnail"][1]["url"]
+      @thumbs[:large]           = datas["entry"]["media$group"]["media$thumbnail"][2]["url"]
 
       # Author
       @author                   = HashWithIndifferentAccess.new
