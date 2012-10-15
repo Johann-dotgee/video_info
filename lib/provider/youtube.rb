@@ -33,7 +33,7 @@ private
       @provider                 = "Youtube"
       
       # Video       
-      @title                    = datas["entry"]["title"]
+      @title                    = datas["entry"]["title"]["$t"]
       @description              = datas["entry"]["media$group"]["media$description"]["$t"].html_safe
       @duration                 = datas["entry"]["media$group"]["yt$duration"]["seconds"]
       @publication              = datas["entry"]["published"]["$t"].to_date.strftime("%d %B %Y")
@@ -55,7 +55,7 @@ private
 
       # Author
       @author                   = HashWithIndifferentAccess.new
-      @author[:name]            = datas["entry"]["author"]["name"]["$t"]
+      @author[:name]            = datas["entry"]["author"][0]["name"]["$t"]
       @author[:uri]             = datas["entry"]["author"]["uri"]["$t"]
       @author[:id]              = datas["entry"]["author"]["yt$userId"]["$t"]
 

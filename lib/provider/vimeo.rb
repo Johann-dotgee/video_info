@@ -1,6 +1,7 @@
 class Vimeo
   attr_accessor :provider, :title, :description, :duration, :uploaded, 
-                :thumbs, :author, :likes, :url, :embed, :openURI_options
+                :thumbs, :author, :likes, :url, :embed, :publication,
+                :openURI_options
 
   def initialize(url, options = {})
     @iframe_attributes = VideoInfo.hash_to_attributes options.delete(:iframe_attributes) if options[:iframe_attributes]
