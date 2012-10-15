@@ -72,6 +72,7 @@ private
       @url[:default]            = "http://www.youtube.com/watch?v=#{@video_id}"
       @url[:embed]              = "http://www.youtube.com/embed/#{@video_id}"
       @embed                    = "<iframe src=\"#{@url[:embed]}\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"#{@iframe_attributes}></iframe>".html_safe
+      raise "#{@url.inspect} <br> @embed.inspect"
     rescue
       nil
     end
