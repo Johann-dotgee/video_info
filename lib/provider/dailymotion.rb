@@ -31,7 +31,7 @@ private
 	    @title                    = datas["title"]
 	    @description              = datas["description"].html_safe
 	    @duration                 = datas["duration"]
-	    @publication              = datas["created_time"]
+	    @publication              = Time.at(datas["created_time"]).to_date.strftime("%d %B %Y")
 	    @updated                  = datas["modified_time"]
 	      
 	    # Thumbs        
